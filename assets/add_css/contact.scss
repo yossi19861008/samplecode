@@ -1,0 +1,705 @@
+@charset "UTF-8";
+@import "settings/config-1.4.00";
+@import "settings/valiables";
+
+.msg {
+  font-size: 17 / $pc_font * 1rem;
+  width: 1000 / $pc_font * 1rem;
+  line-height: (36/17);
+  margin: auto;
+
+  .top_txt {
+    line-height: (36/17);
+  }
+
+  strong {
+    font-size: 54 / $pc_font * 1rem;
+    color: $c_blue;
+    font-weight: normal;
+    line-height: (94.5/54);
+  }
+
+
+  @include media-sp {
+    width: 687 / $sp_all * 1vw;
+    font-size: 28 / $sp_font * 1rem;
+    max-width: 687 / $sp_all * 1vw;
+
+    strong {
+      display: block;
+      @include mg_lh($mb:30 / $sp_font * 1rem, $mt:60 / $sp_font * 1rem, $lH:84/147);
+    }
+  }
+}
+
+
+.under_link {
+  color: $c_blue;
+  text-decoration: underline;
+}
+
+
+.contact_form_wrap {
+  color: $color01;
+
+  @include media-pc {
+    margin: 120 / $pc_font * 1rem 0;
+    position: relative;
+
+    &::after {
+      @include pseudo-base;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      z-index: -1;
+      background-color: #f0f0f0;
+      height: 98.5%;
+      width: 1200 / $pc_font * 1rem;
+    }
+
+    .form_box {
+      width: 1000 / $pc_inner * 1%;
+      margin: auto;
+    }
+
+    $pcformInW :1000/100;
+
+    .reserve_box {
+      margin: 0 / $pc_font * 1rem auto 40 / $pc_font * 1rem;
+      width: 960 / $pc_font * 1rem;
+    }
+
+    .left_box {
+      position: relative;
+      width: 300 / 9.6*1%;
+    }
+
+    .contact_txt_box {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      font-size: 18 / $pc_font * 1rem;
+      line-height: (31.5/18);
+      color: #fff;
+      text-align: center;
+      transform: translateY(-50%);
+
+      .reserve_inner_box {
+        background-color: rgba(#CA3A32, 0.8);
+        padding: 17 / $pc_font * 1rem 0;
+        width: 225 / 3*1%;
+        margin: auto;
+
+        span {
+          font-size: 22 / $pc_font * 1rem;
+          line-height: (30/22);
+        }
+
+        small {
+          line-height: (21/12);
+          font-size: 12 / $pc_font * 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before {
+            content: '';
+            border-top: 2px solid;
+            margin-right: 8/2.25*1%;
+            width: 12/2.25*1%;
+          }
+        }
+      }
+    }
+
+    .right_box {
+      width: 660 /9.6*1%;
+      background-color: #fff;
+
+      .reserve_txt_box {
+        margin: auto;
+        padding: 36 / $pc_font * 1rem 0;
+        width: 580 / 6.6*1%;
+      }
+
+      .reserve_ttl {
+        margin-bottom: 18 / $pc_font * 1rem;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          border-top: 1px solid;
+          width: 18 / 6.6*1%;
+          margin-right: 12 / 6.6*1%;
+        }
+      }
+
+      .reserve_txt {
+        letter-spacing: 0.014em;
+        font-size: 14 / $pc_font * 1rem;
+        line-height: (23/14);
+      }
+    }
+
+    dl {
+      padding: 30 / $pc_inner * 1% 20 / $pc_inner * 1%;
+      @include flex_box;
+      font-size: 18 / $pc_font * 1rem;
+      border-top: 1px solid #dfdfdf;
+
+      dt {
+        font-weight: $fw_medium;
+        color: $c_blue;
+        width: 270 / $pc_font * 1rem;
+      }
+
+      dd {
+        width:calc(100% - #{270 / $pc_font * 1rem});
+        margin-left: auto;
+
+        input[type="text"],
+        input[type="email"] {
+          height: 45 / $pc_font * 1rem;
+          width: 100%;
+          padding: 8px;
+        }
+
+        // input[type="radio"] {
+        //   vertical-align: text-bottom;
+        //   margin-right: 10 / $pc_font * 1rem;
+        //   width: 24 / $pc_font * 1rem;
+        //   height: 24 / $pc_font * 1rem;
+        // }
+
+
+        &.zip {
+          margin-left: 0;
+          margin-bottom: 24 / $pc_font * 1rem;
+
+          input {
+            width: 150 / $pc_font * 1rem;
+          }
+        }
+
+        textarea {
+          padding: 8px;
+          height: 285 / $pc_font * 1rem;
+        }
+
+        &.harf input {
+          width: 330 / $pc_font * 1rem;
+        }
+      }
+
+      .radio_list {
+        @include flex_box;
+
+        >* {
+          margin-left: 0 !important;
+          width: 50%;
+
+          &:not(:nth-child(-n+2)) {
+            margin-top: 35 / $pc_font * 1rem;
+          }
+        }
+      }
+      .radio_list,
+      .radio_list02{
+        label{
+          input[type="radio"]{
+            opacity: 0;
+            position: absolute;
+            z-index: -100;
+          }
+          span{
+            padding-left: 32 / $pc_font * 1rem;
+            position: relative;
+            display: inline-block;
+            &::before,&:after{
+              content:"";
+              display: block;
+              border-radius: 50%;
+              @include position-y-center;
+            }
+            &::before{
+              background: #fff;
+              left:0;
+              width: 24 / $pc_font * 1rem;
+              height: 24 / $pc_font * 1rem;
+              border:  1px solid #e6e6e6;
+              box-sizing: border-box;
+            }
+            &::after{
+              background: $c_blue;
+              width: 12 / $pc_font * 1rem;
+              height: 12 / $pc_font * 1rem;
+              left: 6 / $pc_font * 1rem;
+              top: 50%;
+              transform: translateY(-50%);
+              display: none;
+            }
+          }
+        }
+        label{
+          input[type="radio"]{
+            opacity: 0;
+            position: absolute;
+            z-index: -100;
+            &:checked{
+              + span{
+                &::after{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .radio_list02 {
+        label {
+          display: block;
+        }
+
+        span {
+          &:nth-of-type(1) {
+            label {
+              margin-bottom: 24 / $pc_font * 1rem;
+            }
+          }
+        }
+      }
+
+      &.required {
+        &.name input{
+          margin-right: 16 /10 *1%;
+        }
+        dt {
+          padding-top: 10 / $pc_font * 1rem;
+        }
+
+        .radio_dt {
+          padding-top: 0;
+        }
+
+        dd {
+          position: relative;
+
+          &::after {
+            top: 10 / $pc_font * 1rem;
+            position: absolute;
+            left: -60 / $pc_font * 1rem;
+            font-size: 12 / $pc_font * 1rem;
+            content: "必須";
+            padding: 2 / $pc_font * 1rem 4 / $pc_font * 1rem;
+            color: #F6434D;
+            border: 1px solid #F6434D;
+          }
+        }
+
+        .radio_list,
+        .radio_list02 {
+          &::after {
+            top: 1.2 / $pc_font * 1rem;
+          }
+        }
+
+        &:first-of-type {
+          padding: 70 / $pc_font * 1rem 20 / $pc_font * 1rem;
+          border-top: none;
+
+          dt {
+            padding-top: 0;
+          }
+
+          dd {
+            label {
+              width: 330 / $pc_font * 1rem;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+    .btn_list {
+      padding: 10 / $pc_font * 1rem 0 100 / $pc_font * 1rem;
+      justify-content: center;
+      .btn{
+        font-family: $font;
+      }
+
+      button {
+        width: 280 / $pc_font * 1rem;
+        padding: 23 / $pc_font * 1rem 0;
+        background-color: $c_blue;
+        color: #fff;
+        font-size: 18 / $pc_font * 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $fw_medium;
+      }
+    }
+  }
+
+  // ENDPC
+
+  @include media-sp {
+    margin: 120 / $sp_all * 1vw 0;
+    position: relative;
+
+    &::after {
+      @include pseudo-base;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      background-color: #f0f0f0;
+      height: 99%;
+      width: 687 / $sp_all * 1vw;
+    }
+
+    .inner {
+      width: 607 / $sp_all * 1vw;
+    }
+
+    .form_box {
+      width: 100%;
+      margin: auto;
+    }
+
+    .reserve_box {
+      margin: 0 / $sp_all * 1vw auto 40 / $sp_all * 1vw;
+      width: 100%;
+    }
+
+    .left_box {
+      position: relative;
+      width: 100%;
+      padding: 34 / $sp_all * 1vw 0;
+    }
+
+    .contact_txt_box {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 28 / $sp_font * 1rem;
+      color: #fff;
+      line-height: (49/28);
+      text-align: center;
+
+      .reserve_inner_box {
+        margin: 10 / $sp_all * 1vw auto;
+        background-color: rgba(#CA3A32, 0.8);
+        padding: 20 / $sp_all * 1vw 0;
+        width: 487 / $sp_all * 1vw;
+
+        span {
+          font-size: 34 / $sp_font * 1rem;
+          line-height: (42/34);
+        }
+
+        small {
+          line-height: (35/20);
+          font-size: 20 / $sp_font * 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before {
+            content: '';
+            border-top: 2px solid;
+            margin-right: 12 / $sp_all * 1vw;
+            width: 18 / $sp_all * 1vw;
+          }
+        }
+      }
+    }
+
+    .right_box {
+      background-color: #fff;
+
+      .reserve_txt_box {
+        margin: auto;
+        padding: 38 / $sp_all * 1vw 0 45 / $sp_all * 1vw;
+        width: 547 / $sp_all * 1vw;
+        font-size: 20 / $sp_font * 1rem;
+      }
+
+      .reserve_ttl {
+        font-size: 24 / $sp_font * 1rem;
+        margin-bottom: 37 / $sp_all * 1vw;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          border-top: 1px solid;
+          width: 20 / $sp_all * 1vw;
+          margin-right: 26 / $sp_all * 1vw;
+        }
+      }
+
+      .reserve_txt {
+        letter-spacing: 0.02em;
+        font-size: 20 / $sp_font * 1rem;
+        line-height: (34/20);
+      }
+    }
+
+    dl {
+      padding: 40 / $sp_all * 1vw 0;
+
+      &:not(:first-child) {
+        border-top: 1px solid #dfdfdf;
+      }
+
+      dt {
+        font-weight: $fw_medium;
+        font-weight: 500;
+        color: $c_blue;
+        font-size: 28 / $sp_font * 1rem;
+        margin-bottom: 35 / $sp_all * 1vw;
+      }
+
+      dd {
+
+        input[type="text"],
+        input[type="email"] {
+          height: 70 / $sp_all * 1vw;
+          width: 100%;
+          padding: 8px;
+          font-size: 16px;
+        }
+
+        input[type="radio"] {
+          font-size: 16px;
+          width: 30 / $sp_all * 1vw;
+          height: 30 / $sp_all * 1vw;
+          margin-right: 12 / $sp_all * 1vw;
+        }
+
+        &.zip {
+          margin-bottom: 20 / $sp_all * 1vw;
+
+          input {
+            width: 380 / $sp_all * 1vw;
+          }
+        }
+
+        textarea {
+          font-size: 16px;
+          height: 380 / $sp_all * 1vw;
+          padding: 8px;
+        }
+      }
+
+      .radio_list {
+        label {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding-top: 30 / $sp_all * 1vw;
+          font-size: 16px;
+        }
+      }
+
+      .radio_list02 {
+        label {
+          display: block;
+          font-size: 16px;
+
+          &:first-child {
+            margin-bottom: 24 / $sp_all * 1vw;
+          }
+        }
+
+        input {
+          vertical-align: -0.2em;
+          font-size: 16px;
+        }
+      }
+
+      &.required {
+        &.name dd input {
+          width: 530 / $sp_all * 1vw;
+          margin-right: 20 / $sp_all * 1vw;
+        }
+
+        dt {
+          display: flex;
+
+          &::after {
+            top: 0;
+            right: 0;
+            align-items: center;
+            font-size: 20 / $sp_font * 1rem;
+            content: "必須";
+            padding: 2 / $sp_all * 1vw 6 / $sp_all * 1vw;
+            color: #F6434D;
+            border: 1px solid #F6434D;
+            margin-left: 30 / $sp_all * 1vw;
+          }
+        }
+      }
+      .radio_list,
+      .radio_list02{
+        label{
+          input[type="radio"]{
+            opacity: 0;
+            position: absolute;
+            z-index: -100;
+          }
+          span{
+            padding-left: 42 / $sp_all * 1vw;
+            position: relative;
+            display: inline-block;
+            &::before,&:after{
+              content:"";
+              border-radius: 50%;
+              @include position-y-center;
+            }
+            &::before{
+              background: #fff;
+              left:0;
+              width: 29 / $sp_all * 1vw;
+              height: 29 / $sp_all * 1vw;
+              border:  1px solid #e6e6e6;
+              box-sizing: border-box;
+            }
+            &::after{
+              background: $c_blue;
+              width: 14 / $sp_all * 1vw;
+              height: 14 / $sp_all * 1vw;
+              left: 7 / $sp_all * 1vw;
+              top: 50%;
+              transform: translateY(-50%);
+              display: none;
+            }
+          }
+        }
+        label{
+          input[type="radio"]{
+            opacity: 0;
+            position: absolute;
+            z-index: -100;
+            &:checked{
+              + span{
+                &::after{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btn_list {
+      padding: 20 / $sp_all * 1vw 0 100 / $sp_all * 1vw;
+      justify-content: center;
+      font-family: $font;
+      button {
+        font-family: $font;
+        width: 100%;
+        padding: 30 / $sp_all * 1vw;
+        background-color: $c_blue;
+        color: #fff;
+        font-size: 28 / $sp_font * 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  // ENDSP
+}
+
+
+.reserve_box {
+  display: none !important;
+}
+
+
+/*確認画面
+---------------------*/
+.mw_wp_form_confirm {
+  .contact_form_wrap {
+    .back_btn {
+      font-family: $font;
+      background-color: #CA3A32;
+      @include media-pc{
+        margin-left: 20 / $pc_font * 1rem;
+      }
+
+      @include media-sp {
+        margin-top: 20 / $sp_all * 1vw;
+      }
+    }
+  }
+
+  .msg,
+  .reserve_box {
+    display: none;
+  }
+}
+
+/*完了画面
+---------------------*/
+.mw_wp_form_complete {
+  margin-bottom: 100/$pc_font*1rem;
+
+
+  .btn_list {
+    @include media-pc {
+      padding: 20 / $sp_all * 1vw 0 100 / $sp_all * 1vw;
+      justify-content: center;
+      .next_btn {
+        font-family: $font;
+        width: 280 / $pc_font * 1rem;
+        padding: 23 / $pc_font * 1rem 0;
+        background-color: $c_blue;
+        color: #fff;
+        font-size: 18 / $pc_font * 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @include media-sp {
+      margin-top: 40 / $sp_all * 1vw;
+      padding: 10 / $pc_font * 1rem 0 100 / $pc_font * 1rem;
+      justify-content: center;
+
+      .next_btn {
+        font-family: $font;
+        width: 100%;
+        padding: 30 / $sp_all * 1vw;
+        background-color: $c_blue;
+        color: #fff;
+        font-size: 28 / $sp_font * 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+          content: "";
+          border-top: 2px solid;
+          width: 30 / $sp_all * 1vw;
+          margin-right: 24 / $sp_all * 1vw;
+        }
+      }
+    }
+  }
+}

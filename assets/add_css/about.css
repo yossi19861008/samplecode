@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/*reason_wrap（選ばれる理由）
+--------------------------------------------------------------*/
+#reason_wrap .inner {
+  margin: 0 auto;
+}
+
+#reason_wrap .reason_content {
+  position: relative;
+}
+
+#reason_wrap .reason_content::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(55, 136, 202, 0.8), rgba(24, 41, 135, 0.8)), url(images/bg-cherrybrossam.jpg);
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 0;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+
+#reason_wrap .reason_content .img_txt_box {
+  color: #fff;
+}
+
+#reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no {
+  position: relative;
+}
+
+#reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+@media print, screen and (min-width: 768px) {
+  #reason_wrap .inner {
+    max-width: 1400px;
+  }
+  #reason_wrap .reason_content {
+    margin-top: 3.75rem;
+    padding: 0 7.14286% 5rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #reason_wrap .reason_content::after {
+    height: 74%;
+  }
+  #reason_wrap .reason_content .img_txt_box {
+    width: 30%;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box {
+    margin-top: 1.5625rem;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no {
+    font-size: 1.25rem;
+    padding-left: 9.44444%;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no::before {
+    width: 1.25rem;
+    height: 0.0625rem;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    z-index: 0;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no strong {
+    font-size: 1.875rem;
+    margin-left: 1.66667%;
+  }
+  #reason_wrap .reason_content .img_txt_box .txt_box {
+    letter-spacing: 0.03em;
+  }
+  #reason_wrap .reason_content .img_txt_box .txt_box dt {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: calc(1.5625rem - (((1em*1.5) - 1em)/2));
+    margin-bottom: calc(0px - (((1em*1.5) - 1em)/2));
+  }
+  #reason_wrap .reason_content .img_txt_box .txt_box dd {
+    line-height: 2;
+    margin-top: calc(1.875rem - (((1em*2) - 1em)/2));
+    margin-bottom: calc(0px - (((1em*2) - 1em)/2));
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #reason_wrap .reason_content {
+    margin-top: 9.12647vw;
+    padding-bottom: 13.03781vw;
+  }
+  #reason_wrap .reason_content::after {
+    height: 90%;
+  }
+  #reason_wrap .reason_content .img_txt_box {
+    width: 80.31291vw;
+    margin: 0 auto;
+  }
+  #reason_wrap .reason_content .img_txt_box:not(:first-child) {
+    margin-top: 10.43025vw;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box {
+    margin-top: 6.5189vw;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no {
+    font-size: 0.92857rem;
+    padding-left: 7.04042vw;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no::before {
+    width: 3.91134vw;
+    height: 0.26076vw;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: 0;
+  }
+  #reason_wrap .reason_content .img_txt_box .tit_no_box .tit_no strong {
+    font-size: 1.78571rem;
+    margin-left: 2.34681vw;
+  }
+  #reason_wrap .reason_content .img_txt_box .txt_box {
+    letter-spacing: 0.015em;
+  }
+  #reason_wrap .reason_content .img_txt_box .txt_box dt {
+    font-size: 1.28571rem;
+    line-height: 1.61111;
+    margin-top: calc(5.21512vw - (((1em*1.61111) - 1em)/2));
+    margin-bottom: calc(0px - (((1em*1.61111) - 1em)/2));
+  }
+  #reason_wrap .reason_content .img_txt_box .txt_box dd {
+    line-height: 1.8;
+    margin-top: calc(3.91134vw - (((1em*1.8) - 1em)/2));
+    margin-bottom: calc(0px - (((1em*1.8) - 1em)/2));
+    font-size: 0.85714rem;
+  }
+}
+
+/*promise_wrap（お約束）
+--------------------------------------------------------------*/
+@media print, screen and (min-width: 768px) {
+  #promise_wrap {
+    margin-top: 7.5rem;
+  }
+  #promise_wrap .promise_content .content_txt {
+    width: 30.83333%;
+  }
+  #promise_wrap .promise_content .content_txt .txt_box {
+    width: 72.43243%;
+    line-height: 1.8;
+    margin-top: calc(1.25rem - (((1em*1.8) - 1em)/2));
+    margin-bottom: calc(0px - (((1em*1.8) - 1em)/2));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #promise_wrap {
+    margin-top: 15.64537vw;
+  }
+  #promise_wrap .promise_content .content_txt .txt_box {
+    line-height: 1.8;
+    margin-top: calc(3.91134vw - (((1em*1.8) - 1em)/2));
+    margin-bottom: calc(0px - (((1em*1.8) - 1em)/2));
+  }
+}
+
+/*gsc_pride_wrap（GSCプライド）
+--------------------------------------------------------------*/
+@media print, screen and (min-width: 768px) {
+  #gsc_pride_wrap {
+    padding-top: 7.5rem;
+  }
+  #gsc_pride_wrap .two_col_box {
+    margin-top: 3.75rem;
+  }
+  #gsc_pride_wrap .two_col_box .txt_area {
+    width: 31rem;
+    margin: 0 auto 0 6.25%;
+    position: relative;
+  }
+  #gsc_pride_wrap .two_col_box .txt_area .tit_txt_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #gsc_pride_wrap {
+    padding-top: 15.64537vw;
+  }
+  #gsc_pride_wrap .two_col_box {
+    margin-top: 9.12647vw;
+  }
+  #gsc_pride_wrap .two_col_box .img_box {
+    width: 84.35463vw;
+    margin: 0 0 0 auto;
+  }
+  #gsc_pride_wrap .two_col_box .txt_area {
+    width: 89.17862vw;
+    margin: 7.82269vw auto 0;
+  }
+  #gsc_pride_wrap .two_col_box .txt_area .tit_txt_box {
+    width: 100%;
+  }
+}

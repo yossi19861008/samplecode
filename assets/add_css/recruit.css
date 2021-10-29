@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/*philosophy_wrap（経営理念）
+--------------------------------------------------------------*/
+#philosophy_wrap .ceo_coment .txt {
+  letter-spacing: 0.04em;
+}
+
+@media print, screen and (min-width: 768px) {
+  #philosophy_wrap .two_col_box {
+    margin-top: 3.75rem;
+  }
+  #philosophy_wrap .two_col_box .txt_area {
+    width: 31.25rem;
+    margin: 0 6.25% 0 auto;
+    position: relative;
+  }
+  #philosophy_wrap .two_col_box .txt_area .tit_txt_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  #philosophy_wrap .two_col_box .right_box figure {
+    width: 100%;
+  }
+  #philosophy_wrap .ceo_coment {
+    width: 83.33333%;
+    margin: 6.25rem 0 0 auto;
+  }
+  #philosophy_wrap .ceo_coment .txt {
+    font-size: 1.0625rem;
+    line-height: 2.11765;
+    letter-spacing: 0.04em;
+  }
+  #philosophy_wrap .ceo_coment .txt:not(:first-child) {
+    line-height: 2.11765;
+    margin-top: calc(2rem - (((1em*2.11765) - 1em)/2));
+    margin-bottom: calc(0px - (((1em*2.11765) - 1em)/2));
+  }
+  #philosophy_wrap .ceo_coment .ceo_sign {
+    width: 30%;
+    margin: 3.125rem 0 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #philosophy_wrap .inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #philosophy_wrap .two_col_box {
+    margin-top: 9.12647vw;
+  }
+  #philosophy_wrap .two_col_box .img_box {
+    width: 84.35463vw;
+    margin: 7.82269vw 0 0 auto;
+  }
+  #philosophy_wrap .two_col_box .txt_area, #philosophy_wrap .two_col_box .ceo_coment {
+    width: 89.56975vw;
+    margin: 0 auto;
+  }
+  #philosophy_wrap .two_col_box .txt_area .tit_txt_box {
+    width: 100%;
+  }
+  #philosophy_wrap .ceo_coment {
+    margin-top: 7.82269vw;
+  }
+  #philosophy_wrap .ceo_coment .txt {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  #philosophy_wrap .ceo_coment .ceo_sign {
+    width: 58.01825vw;
+    margin: 5.21512vw 0 0 auto;
+  }
+}
+
+/*t_person_wrap（求める人物像）
+--------------------------------------------------------------*/
+@media print, screen and (min-width: 768px) {
+  #t_person_wrap {
+    margin-top: 7.5rem;
+  }
+  #t_person_wrap .col_cont_box {
+    width: 22.5%;
+  }
+  #t_person_wrap .col_cont_box .col_txt_box {
+    width: 85.18519%;
+    margin: 1.5rem auto 0;
+  }
+  #t_person_wrap .col_cont_box .col_txt_box .txt {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    line-height: 2;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #t_person_wrap {
+    margin-top: 15.64537vw;
+  }
+  #t_person_wrap .col_cont_box:not(:first-child) {
+    margin-top: 7.82269vw;
+  }
+  #t_person_wrap .col_cont_box .col_txt_box {
+    margin: 3.91134vw auto 0;
+  }
+  #t_person_wrap .col_cont_box .col_txt_box .txt {
+    font-size: 0.85714rem;
+    letter-spacing: 0.03em;
+    line-height: 1.79167;
+  }
+}
+
+/*works_wrap（仕事紹介）
+--------------------------------------------------------------*/
+#works_wrap .three_col_box {
+  width: 100%;
+}
+
+#works_wrap .three_col_box .col_box {
+  position: relative;
+}
+
+#works_wrap .three_col_box .col_box .works_img {
+  display: block;
+}
+
+#works_wrap .three_col_box .col_box .txt_area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#works_wrap .three_col_box .col_box .txt_area a {
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+#works_wrap .three_col_box .col_box .txt_area .sec_tit_box .sec_tit {
+  color: #182987;
+}
+
+#works_wrap .three_col_box .col_box .txt_area .sec_tit_box .sec_subtit {
+  color: #333;
+}
+
+#works_wrap .three_col_box .col_box .txt_area .btn {
+  color: #182987;
+  font-weight: 500;
+}
+
+#works_wrap .three_col_box .col_box .txt_area .btn::before {
+  background-color: #182987;
+}
+
+@media print, screen and (min-width: 768px) {
+  #works_wrap {
+    margin-top: 7.5rem;
+  }
+  #works_wrap .three_col_box {
+    margin-top: 3.75rem;
+  }
+  #works_wrap .three_col_box .col_box {
+    width: calc(100% / 3);
+  }
+  #works_wrap .three_col_box .col_box .txt_area a {
+    width: 23.9375rem;
+    padding: 4.8125rem 0;
+  }
+  #works_wrap .three_col_box .col_box .txt_area .sec_tit_box .sec_tit {
+    font-size: 2.1875rem;
+    margin-bottom: 1.125rem;
+  }
+  #works_wrap .three_col_box .col_box .txt_area .sec_tit_box .sec_subtit {
+    font-size: 1.125rem;
+  }
+  #works_wrap .three_col_box .col_box .txt_area .btn {
+    font-size: 1rem;
+    margin-top: 1.625rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #works_wrap {
+    margin-top: 15.64537vw;
+  }
+  #works_wrap .three_col_box {
+    margin-top: 9.12647vw;
+  }
+  #works_wrap .three_col_box .col_box .txt_area a {
+    width: 63.49413vw;
+    padding: 7.56193vw 0 6.77966vw;
+  }
+  #works_wrap .three_col_box .col_box .txt_area .sec_tit_box .sec_tit {
+    font-size: 1.64286rem;
+    margin-bottom: 3.65059vw;
+  }
+  #works_wrap .three_col_box .col_box .txt_area .sec_tit_box .sec_subtit {
+    font-size: 0.78571rem;
+  }
+  #works_wrap .three_col_box .col_box .txt_area .btn {
+    font-size: 0.71429rem;
+    margin-top: 3.65059vw;
+  }
+}
+
+/*requirements_wrap（募集要項）
+--------------------------------------------------------------*/
+#requirements_wrap .img_area {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#requirements_wrap .txt_area {
+  text-align: center;
+  color: #182987;
+}
+
+#requirements_wrap .txt_area .btn {
+  color: #182987;
+  font-weight: 500;
+}
+
+#requirements_wrap .txt_area .btn::before {
+  background-color: #182987;
+}
+
+#requirements_wrap .contact_area {
+  position: relative;
+}
+
+#requirements_wrap .contact_area .txt_area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+#requirements_wrap .contact_area .txt_area a {
+  display: block;
+  background: rgba(24, 41, 135, 0.8);
+  text-align: center;
+}
+
+#requirements_wrap .contact_area .txt_area .sec_tit_box .sec_tit {
+  color: #fff;
+}
+
+#requirements_wrap .contact_area .txt_area .btn {
+  color: #182987;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+  font-weight: 700;
+  background-color: #fff;
+}
+
+#requirements_wrap .contact_area .txt_area .btn::before {
+  background-color: #182987;
+}
+
+@media print, screen and (min-width: 768px) {
+  #requirements_wrap {
+    padding-top: 7.5rem;
+  }
+  #requirements_wrap .img_area {
+    width: 83.33333%;
+    margin: 3.75rem auto 0;
+  }
+  #requirements_wrap .img_area .img_box {
+    width: 47.5%;
+  }
+  #requirements_wrap .txt_area {
+    margin-top: 2rem;
+  }
+  #requirements_wrap .txt_area .sec_tit {
+    font-size: 1.75rem;
+    margin-bottom: 1.125rem;
+  }
+  #requirements_wrap .txt_area .btn {
+    font-size: 1rem;
+  }
+  #requirements_wrap .contact_area {
+    width: 66.66667%;
+    margin: 5rem auto 0;
+  }
+  #requirements_wrap .contact_area .txt_area {
+    margin: 0;
+  }
+  #requirements_wrap .contact_area .txt_area a {
+    width: 30rem;
+    padding: 2.25rem 0 1.875rem;
+  }
+  #requirements_wrap .contact_area .txt_area .sec_tit_box .sec_tit {
+    font-size: 1.375rem;
+    margin-bottom: 1.125rem;
+  }
+  #requirements_wrap .contact_area .txt_area .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem 0.75rem 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #requirements_wrap {
+    padding-top: 15.64537vw;
+  }
+  #requirements_wrap .inner {
+    width: 89.56975vw;
+    margin: 0 auto;
+  }
+  #requirements_wrap .img_area {
+    margin: 9.12647vw auto 0;
+  }
+  #requirements_wrap .img_area .img_box {
+    width: 42.50326vw;
+  }
+  #requirements_wrap .txt_area {
+    margin-top: 3.91134vw;
+  }
+  #requirements_wrap .txt_area .sec_tit {
+    font-size: 1.07143rem;
+    margin-bottom: 2.34681vw;
+  }
+  #requirements_wrap .txt_area .btn {
+    font-size: 0.71429rem;
+  }
+  #requirements_wrap .contact_area {
+    margin: 9.12647vw auto 0;
+  }
+  #requirements_wrap .contact_area .txt_area {
+    margin: 0;
+  }
+  #requirements_wrap .contact_area .txt_area a {
+    width: 66.10169vw;
+    padding: 4.69361vw 0 4.1721vw;
+  }
+  #requirements_wrap .contact_area .txt_area .sec_tit_box .sec_tit {
+    font-size: 1.07143rem;
+    margin-bottom: 2.86832vw;
+  }
+  #requirements_wrap .contact_area .txt_area .btn {
+    font-size: 0.71429rem;
+    padding: 1.30378vw 6.25815vw 1.30378vw 4.43286vw;
+  }
+}

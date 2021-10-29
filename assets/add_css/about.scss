@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@import "settings/config-1.4.00";
+@import "settings/valiables";
+
+
+
+/*reason_wrap（選ばれる理由）
+--------------------------------------------------------------*/
+#reason_wrap {
+  .inner {
+    margin: 0 auto;
+  }
+  .reason_content {
+    position: relative;
+    &::after {
+      @include pseudo-base;
+      background: linear-gradient(135deg, rgba(55, 136, 202, .8), rgba(24, 41, 135, .8)),url(images/bg-cherrybrossam.jpg);
+      background-size: cover;
+      @include position-x-center($pos_b:0);
+      z-index: -1;
+    }
+    .img_txt_box {
+      color: #fff;
+      .tit_no_box {
+        .tit_no {
+          position: relative;
+          &::before {
+            @include pseudo-base($bgcolor:#fff);
+          }
+        }
+      }
+    }
+  }
+@include media-pc{
+  .inner {
+    max-width: 1400px;
+  }
+  .reason_content {
+    margin-top: 60/$pc_font*1rem;
+    padding: 0 100/14*1% 80/$pc_font*1rem;
+    &::after {
+      height: 74%;
+    }
+    @include justify-content;
+    .img_txt_box {
+      width: 360/12*1%;
+      .tit_no_box {
+        margin-top: 25/$pc_font*1rem;
+        .tit_no {
+          font-size: 20/$pc_font*1rem;
+          padding-left: 34/3.6*1%;
+          &::before {
+            width: 20/$pc_font*1rem;
+            height: 1/$pc_font*1rem;
+            @include position($position:absolute,$pos_t:60%,$pos_l:0);
+          }
+          strong {
+            font-size: 30/$pc_font*1rem;
+            margin-left: 6/3.6*1%;
+          }
+        }
+      }
+      .txt_box {
+        letter-spacing: 0.03em;
+        dt {
+          font-weight: $fw_medium;
+          font-size: 24/$pc_font*1rem;
+          @include mg_lh($mt:25/$pc_font*1rem , $lH:36/24);
+        }
+        dd {
+          @include mg_lh($mt:30/$pc_font*1rem , $lH:32/16);
+          font-size: 16/$pc_font*1rem;
+        }
+      }
+    }
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+  .reason_content {
+    margin-top: 70/$sp_all*1vw;
+    padding-bottom: 100/$sp_all*1vw;
+    &::after {
+      height: 90%;
+    }
+    .img_txt_box {
+      width: 616/$sp_all*1vw;
+      margin: 0 auto;
+      &:not(:first-child) {
+        margin-top: 80/$sp_all*1vw;
+      }
+      .tit_no_box {
+        margin-top: 50/$sp_all*1vw;
+        .tit_no {
+          font-size: 26/$sp_font*1rem;
+          padding-left: 54/$sp_all*1vw;
+          &::before {
+            width: 30/$sp_all*1vw;
+            height: 2/$sp_all*1vw;
+            @include position($position:absolute,$pos_t:70%,$pos_l:0);
+          }
+          strong {
+            font-size: 50/$sp_font*1rem;
+            margin-left: 18/$sp_all*1vw;
+          }
+        }
+      }
+      .txt_box {
+        letter-spacing: 0.015em;
+        dt {
+          font-size: 36/$sp_font*1rem;
+          @include mg_lh($mt:40/$sp_all*1vw , $lH:58/36);
+        }
+        dd {
+          @include mg_lh($mt:30/$sp_all*1vw , $lH:43.2/24);
+          font-size: 24/$sp_font*1rem;
+        }
+      }
+    }
+  }
+}/////////END SP////////////////////////////
+}
+
+
+
+/*promise_wrap（お約束）
+--------------------------------------------------------------*/
+#promise_wrap {
+@include media-pc{
+  margin-top: 120/$pc_font*1rem;
+  .promise_content {
+    .content_txt {
+      width: 370/$pc_inner*1%;
+      .txt_box {
+        width: 268/3.7*1%;
+        @include mg_lh($mt:20/$pc_font*1rem , $lH:36/20);
+      }
+    }
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+  margin-top: 120/$sp_all*1vw;
+  .promise_content {
+    .content_txt {
+      .txt_box {
+        @include mg_lh($mt:30/$sp_all*1vw , $lH:36/20);
+      }
+    }
+  }
+}/////////END SP////////////////////////////
+}
+
+
+
+/*gsc_pride_wrap（GSCプライド）
+--------------------------------------------------------------*/
+#gsc_pride_wrap {
+@include media-pc{
+  padding-top: 120/$pc_font*1rem;
+  .two_col_box {
+    margin-top: 60/$pc_font*1rem;
+    .txt_area {
+      width: 496/$pc_font*1rem;
+      margin: 0 auto 0 100/$pc_all*1%;
+      position: relative;
+      .tit_txt_box {
+        @include position-center;
+        width: 100%;
+      }
+    }
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+  padding-top: 120/$sp_all*1vw;
+  .two_col_box {
+    margin-top: 70/$sp_all*1vw;
+    .img_box {
+      width: 647/$sp_all*1vw;
+      margin: 0 0 0 auto;
+    }
+    .txt_area {
+      width: 684/$sp_all*1vw;
+      margin: 60/$sp_all*1vw auto 0;
+      .tit_txt_box {
+        width: 100%;
+      }
+    }
+  }
+}/////////END SP////////////////////////////
+}

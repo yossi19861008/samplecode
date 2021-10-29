@@ -1,0 +1,347 @@
+@charset "UTF-8";
+@import "settings/config-1.4.00";
+@import "settings/valiables";
+
+
+
+
+/*philosophy_wrap（経営理念）
+--------------------------------------------------------------*/
+#philosophy_wrap {
+  .ceo_coment {
+      .txt {
+        letter-spacing: 0.04em;
+      }
+    }
+  @include media-pc{
+    .two_col_box {
+      margin-top: 60/$pc_font*1rem;
+
+      .txt_area {
+        width: 500/$pc_font*1rem;
+        margin: 0 100/$pc_all*1% 0 auto;
+        position: relative;
+        .tit_txt_box {
+          @include position-center;
+          width: 100%;
+        }
+      }
+      .right_box{
+        figure{
+          width: 100%;
+        }
+      }
+    }
+    .ceo_coment {
+      width: 1000/$pc_inner*1%;
+      margin: 100/$pc_font*1rem 0 0 auto;
+      .txt {
+        font-size: 17/$pc_font*1rem;
+        line-height: (36/17);
+        letter-spacing: 0.04em;
+        &:not(:first-child) {
+          @include mg_lh($mt:32/$pc_font*1rem , $lH:36/17);
+        }
+      }
+      .ceo_sign {
+        width: 300/10*1%;
+        margin: 50/$pc_font*1rem 0 0 auto;
+      }
+    }
+  }/////////END PC////////////////////////////
+  @include media-sp {
+    .inner {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .two_col_box {
+      margin-top: 70/$sp_all*1vw;
+      .img_box {
+        width: 647/$sp_all*1vw;
+        margin: 60/$sp_all*1vw  0 0 auto;
+      }
+      .txt_area,.ceo_coment {
+        width: 687/$sp_all*1vw;
+        margin: 0 auto;
+      }
+      .txt_area {
+        .tit_txt_box {
+          width: 100%;
+        }
+      }
+    }
+    .ceo_coment {
+      margin-top: 60/$sp_all*1vw;
+      .txt {
+        font-size: 28/$sp_font*1rem;
+        line-height: (47.6/28);
+      }
+      .ceo_sign {
+        width: 445/$sp_all*1vw;
+        margin: 40/$sp_all*1vw 0 0 auto;
+      }
+    }
+  }/////////END SP////////////////////////////
+}
+
+
+/*t_person_wrap（求める人物像）
+--------------------------------------------------------------*/
+#t_person_wrap {
+  @include media-pc{
+    margin-top: 120/$pc_font*1rem;
+    .col_cont_box {
+      width: 270/$pc_inner*1%;
+      .col_txt_box {
+        width: 230/2.7*1%;
+        margin: 24/$pc_font*1rem auto 0;
+        .txt {
+          font-size: 16/$pc_font*1rem;
+          letter-spacing: 0.05em;
+          line-height: (32/16);
+        }
+      }
+    }
+  }/////////END PC////////////////////////////
+  @include media-sp {
+    margin-top: 120/$sp_all*1vw;
+    .col_cont_box {
+      &:not(:first-child) {
+        margin-top: 60/$sp_all*1vw;
+      }
+      .col_txt_box {
+        margin: 30/$sp_all*1vw auto 0;
+        .txt {
+          font-size: 24/$sp_font*1rem;
+          letter-spacing: 0.03em;
+          line-height: (43/24);
+        }
+      }
+    }
+  }/////////END SP////////////////////////////
+}
+
+
+/*works_wrap（仕事紹介）
+--------------------------------------------------------------*/
+#works_wrap {
+  .three_col_box {
+    width: 100%;
+      .col_box {
+        position: relative;
+        .works_img {
+          display: block;
+        }
+        .txt_area {
+          @include position-center;
+          a {
+            display: block;
+            background: rgba(255,255,255,.8);
+            text-align: center;
+          }
+          .sec_tit_box {
+            .sec_tit {
+              color: $c_blue;
+            }
+            .sec_subtit {
+              color: $color01;
+            }
+          }
+          .btn {
+            color: $c_blue;
+            font-weight: $fw_medium;
+            &::before {
+              background-color: $c_blue;
+            }
+          }
+        }
+      }
+    }
+  @include media-pc{
+    margin-top: 120/$pc_font*1rem;
+    .three_col_box {
+      margin-top: 60/$pc_font*1rem;
+      .col_box {
+        width: calc(100% / 3);
+        .txt_area {
+          a {
+            width: 383/$pc_font*1rem;
+            padding: 77/$pc_font*1rem 0;
+          }
+          .sec_tit_box {
+            .sec_tit {
+              font-size: 35/$pc_font*1rem;
+              margin-bottom: 18/$pc_font*1rem;
+            }
+            .sec_subtit {
+              font-size: 18/$pc_font*1rem;
+            }
+          }
+          .btn {
+            font-size: 16/$pc_font*1rem;
+            margin-top: 26/$pc_font*1rem;
+          }
+        }
+      }
+    }
+  }/////////END PC////////////////////////////
+  @include media-sp {
+    margin-top: 120/$sp_all*1vw;
+    .three_col_box {
+      margin-top: 70/$sp_all*1vw;
+      .col_box {
+        .txt_area {
+          a {
+            width: 487/$sp_all*1vw;
+            padding: 58/$sp_all*1vw 0 52/$sp_all*1vw;
+          }
+          .sec_tit_box {
+            .sec_tit {
+              font-size: 46/$sp_font*1rem;
+              margin-bottom: 28/$sp_all*1vw;
+            }
+            .sec_subtit {
+              font-size: 22/$sp_font*1rem;
+            }
+          }
+          .btn {
+            font-size: 20/$sp_font*1rem;
+            margin-top: 28/$sp_all*1vw;
+          }
+        }
+      }
+    }
+  }/////////END SP////////////////////////////
+}
+
+
+/*requirements_wrap（募集要項）
+--------------------------------------------------------------*/
+#requirements_wrap {
+  .img_area {
+      @include justify-content;
+    }
+    .txt_area {
+      text-align: center;
+      color: $c_blue;
+      .btn {
+        color: $c_blue;
+        font-weight: $fw_medium;
+        &::before {
+          background-color: $c_blue;
+        }
+      }
+    }
+    .contact_area {
+      position: relative;
+      .txt_area {
+        @include position-center;
+        margin: 0;
+          a {
+            display: block;
+            background: rgba($c_blue,.8);
+            text-align: center;
+          }
+          .sec_tit_box {
+            .sec_tit {
+              color: #fff;
+            }
+          }
+          .btn {
+            color: $c_blue;
+            font-family: $font;
+            font-weight: $fw_bold;
+            background-color: #fff;
+            &::before {
+              background-color: $c_blue;
+            }
+          }
+        }
+    }
+  @include media-pc{
+    padding-top: 120/$pc_font*1rem;
+    .img_area {
+      width: 1000/$pc_inner*1%;
+      margin: 60/$pc_font*1rem auto 0;
+      .img_box {
+        width: 475/10*1%;
+      }
+    }
+    .txt_area {
+      margin-top: 32/$pc_font*1rem;
+      .sec_tit {
+        font-size: 28/$pc_font*1rem;
+        margin-bottom: 18/$pc_font*1rem;
+      }
+      .btn {
+        font-size: 16/$pc_font*1rem;
+      }
+    }
+    .contact_area {
+      width: 800/$pc_inner*1%;
+      margin: 80/$pc_font*1rem auto 0;
+      .txt_area {
+        margin: 0;
+          a {
+            width: 480/$pc_font*1rem;
+            padding: 36/$pc_font*1rem 0 30/$pc_font*1rem;
+          }
+          .sec_tit_box {
+            .sec_tit {
+              font-size: 22/$pc_font*1rem;
+              margin-bottom: 18/$pc_font*1rem;
+            }
+          }
+          .btn {
+            font-size: 16/$pc_font*1rem;
+              padding: 12/$pc_font*1rem 28/$pc_font*1rem 12/$pc_font*1rem 20/$pc_font*1rem;
+          }
+        }
+    }
+  }/////////END PC////////////////////////////
+  @include media-sp {
+    padding-top: 120/$sp_all*1vw;
+    .inner {
+      width: 687/$sp_all*1vw;
+      margin: 0 auto;
+    }
+    .img_area {
+      margin: 70/$sp_all*1vw auto 0;
+      .img_box {
+        width: 326/$sp_all*1vw;
+      }
+    }
+    .txt_area {
+      margin-top: 30/$sp_all*1vw;
+      .sec_tit {
+        font-size: 30/$sp_font*1rem;
+        margin-bottom: 18/$sp_all*1vw;
+      }
+      .btn {
+        font-size: 20/$sp_font*1rem;
+      }
+    }
+    .contact_area {
+      margin: 70/$sp_all*1vw auto 0;
+      .txt_area {
+        margin: 0;
+          a {
+            width: 507/$sp_all*1vw;
+            padding: 36/$sp_all*1vw 0 32/$sp_all*1vw;
+          }
+          .sec_tit_box {
+            .sec_tit {
+              font-size: 30/$sp_font*1rem;
+              margin-bottom: 22/$sp_all*1vw;
+            }
+          }
+          .btn {
+            font-size: 20/$sp_font*1rem;
+            padding: 10/$sp_all*1vw 48/$sp_all*1vw 10/$sp_all*1vw 34/$sp_all*1vw;
+        }
+      }
+    }
+  }/////////END SP////////////////////////////
+}
+
+

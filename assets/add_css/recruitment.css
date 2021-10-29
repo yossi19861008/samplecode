@@ -1,0 +1,388 @@
+@charset "UTF-8";
+.contact_area {
+  position: relative;
+}
+.contact_area .txt_area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+.contact_area .txt_area a {
+  display: block;
+  background: rgba(24, 41, 135, 0.8);
+  text-align: center;
+}
+.contact_area .txt_area .sec_tit_box .sec_tit {
+  color: #fff;
+}
+.contact_area .txt_area .btn {
+  color: #182987;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+  font-weight: 700;
+  background-color: #fff;
+}
+.contact_area .txt_area .btn::before {
+  background-color: #182987;
+}
+
+@media print, screen and (min-width: 768px) {
+  .contact_area {
+    width: 66.6666666667%;
+    margin: 5rem auto 0;
+  }
+  .contact_area .txt_area {
+    margin: 0;
+  }
+  .contact_area .txt_area a {
+    width: 30rem;
+    padding: 2.25rem 0 1.875rem;
+  }
+  .contact_area .txt_area .sec_tit_box .sec_tit {
+    font-size: 1.375rem;
+    margin-bottom: 1.125rem;
+  }
+  .contact_area .txt_area .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem 0.75rem 1.25rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contact_area {
+    margin: 9.1264667536vw auto 0;
+  }
+  .contact_area .txt_area {
+    margin: 0;
+  }
+  .contact_area .txt_area a {
+    width: 66.1016949153vw;
+    padding: 4.6936114733vw 0 4.1720990874vw;
+  }
+  .contact_area .txt_area .sec_tit_box .sec_tit {
+    font-size: 1.0714285714rem;
+    margin-bottom: 2.8683181226vw;
+  }
+  .contact_area .txt_area .btn {
+    font-size: 0.7142857143rem;
+    padding: 1.3037809648vw 6.258148631vw 1.3037809648vw 4.4328552803vw;
+  }
+}
+.arrow-down {
+  position: relative;
+}
+.arrow-down::after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #182987;
+  border-bottom: 1px solid #182987;
+  transform: rotate(45deg) translateY(-50%);
+  right: 10%;
+  top: 40%;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+@media only screen and (max-width: 767px) {
+  .arrow-down::after {
+    right: 8%;
+  }
+}
+
+.recruitment__disabled {
+  color: #182987;
+  text-align: center;
+}
+@media print, screen and (min-width: 768px) {
+  .recruitment__wrap {
+    padding-bottom: 7.5rem;
+  }
+  .recruitment__disabled {
+    font-size: 1.625rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .recruitment__wrap {
+    padding-bottom: 15.6453715776vw;
+  }
+  .recruitment__disabled {
+    font-size: 0.9285714286rem;
+  }
+}
+.recruitment__nav {
+  justify-content: center;
+}
+.recruitment__nav a {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #182987;
+  color: #182987;
+}
+@media print, screen and (min-width: 768px) {
+  .recruitment__nav li {
+    margin-right: 2.1875rem;
+  }
+  .recruitment__nav li:last-child {
+    margin-right: 0;
+  }
+  .recruitment__nav a {
+    font-size: 1.25rem;
+    width: 21.5625rem;
+    height: 3.125rem;
+    color: #182987;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .recruitment__nav li {
+    margin-bottom: 5.2151238592vw;
+  }
+  .recruitment__nav li:last-child {
+    margin-bottom: 0;
+  }
+  .recruitment__nav a {
+    font-size: 1.0714285714rem;
+    width: 66.1016949153vw;
+    height: 10.4302477184vw;
+    margin: 0 auto;
+  }
+}
+.recruitment__title {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1460px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.recruitment__title::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 90.4109589041%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.recruitment__title h2 {
+  letter-spacing: 0.025em;
+}
+.recruitment__title__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.recruitment__title__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  font-family: "object-fit:cover; object-position:50% 50%; ";
+  -webkit-animation: scaleDown 15s ease-in-out 0s infinite alternate forwards;
+  -ms-animation: scaleDown 15s ease-in-out 0s infinite alternate forwards;
+  animation: scaleDown 15s ease-in-out 0s infinite alternate forwards;
+}
+.recruitment__subtitle {
+  background-color: #182987;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+}
+@media print, screen and (min-width: 768px) {
+  .recruitment__title {
+    margin-top: 4.375rem;
+    padding-top: 6.875rem;
+    height: 22.8125rem;
+  }
+  .recruitment__title::after {
+    height: 4.375rem;
+  }
+  .recruitment__title h2 {
+    font-size: 2.875rem;
+  }
+  .recruitment__subtitle {
+    margin-top: 1.5625rem;
+    width: 14.375rem;
+    height: 2.625rem;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .recruitment__title {
+    margin-top: 15.6453715776vw;
+    height: 49.5436766623vw;
+    padding-top: 11.7340286832vw;
+  }
+  .recruitment__title h2 {
+    font-size: 1.7857142857rem;
+  }
+  .recruitment__title::after {
+    height: 12.3859191656vw;
+  }
+  .recruitment__subtitle {
+    margin-top: 2.6075619296vw;
+    width: 30.8996088657vw;
+    height: 6.518904824vw;
+    font-size: 1rem;
+  }
+}
+.recruitment__content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+@media only screen and (max-width: 767px) {
+  .recruitment__content {
+    width: 89.5697522816vw;
+  }
+}
+.recruitment__time {
+  position: relative;
+  color: #182987;
+}
+.recruitment__time::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F0F0;
+  z-index: -1;
+}
+@media print, screen and (min-width: 768px) {
+  .recruitment__time {
+    height: 3.125rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .recruitment__time::after {
+    left: 50%;
+    width: calc(100% - 30px);
+    transform: skew(-30deg) translateX(-50%);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .recruitment__time {
+    width: 79.1395045632vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5.2151238592vw;
+    font-size: 1rem;
+    line-height: 1.6428571429;
+  }
+  .recruitment__time::after {
+    left: 50%;
+    width: calc(100% - 10px);
+    transform: skew(-10deg) translateX(-50%);
+  }
+}
+.recruitment__list dl {
+  border-bottom: 1px solid #E6E6E6;
+}
+.recruitment__list dl dt {
+  color: #182987;
+  width: 20%;
+}
+.recruitment__list dl dd {
+  width: 80%;
+}
+@media print, screen and (min-width: 768px) {
+  .recruitment__list {
+    padding-top: 1.25rem;
+  }
+  .recruitment__list dl {
+    display: flex;
+  }
+  .recruitment__list dl dt {
+    padding: 0.9375rem 0 0.9375rem 1.875rem;
+    line-height: 2;
+  }
+  .recruitment__list dl dd {
+    padding: 0.9375rem 1.875rem 0.9375rem 0;
+    line-height: 2;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .recruitment__list {
+    padding-top: 1.7857142857rem;
+  }
+  .recruitment__list dl {
+    margin-bottom: 5.2151238592vw;
+  }
+  .recruitment__list dl dt {
+    width: auto;
+  }
+  .recruitment__list dl dd {
+    width: auto;
+    margin-top: 2.6075619296vw;
+    padding-bottom: 5.2151238592vw;
+    line-height: 1.8;
+  }
+}
+.recruitment__career__job h3 {
+  position: relative;
+  color: #969696;
+}
+.recruitment__career__job h3::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #182987;
+  top: 50%;
+  left: 0;
+}
+.recruitment__career__job h3 span {
+  position: relative;
+  color: #182987;
+  display: inline-block;
+}
+@media print, screen and (min-width: 768px) {
+  .recruitment__career__title {
+    margin-top: 7.5rem;
+  }
+  .recruitment__career__nav a {
+    width: 13.4375rem;
+  }
+  .recruitment__career__job {
+    padding-top: 4.375rem;
+  }
+  .recruitment__career__job h3 {
+    padding-left: 1.875rem;
+    font-size: 1.25rem;
+  }
+  .recruitment__career__job h3::before {
+    width: 1.25rem;
+  }
+  .recruitment__career__job h3 span {
+    top: 2px;
+    font-size: 2.25rem;
+    padding-right: 1.875rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .recruitment__career__job {
+    padding-top: 15.6453715776vw;
+  }
+  .recruitment__career__job:first-child {
+    padding-top: 13.037809648vw;
+  }
+  .recruitment__career__job h3 {
+    padding-left: 5.9973924381vw;
+    font-size: 0.9285714286rem;
+  }
+  .recruitment__career__job h3::before {
+    width: 3.1290743155vw;
+  }
+  .recruitment__career__job h3 span {
+    top: 1px;
+    font-size: 1.6428571429rem;
+    padding-right: 2.5vw;
+  }
+}

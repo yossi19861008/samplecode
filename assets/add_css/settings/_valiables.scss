@@ -1,0 +1,49 @@
+@charset "utf-8";
+/////サイトごとに修正
+
+$color01:#333;
+$color02:#1949A0;
+$c_red:#F6434D ;
+$c_blue:#182987;
+
+$color03:#515151;
+$color04:#e4dfce;
+$c_gray01:#878787;
+
+$bg01:#00a0e2;
+//$bg_line:#2BD65F;
+
+$pcPer:55;
+$spPer:45;
+
+$font:'Noto Sans JP',"ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro",YuGothic, "Yu Gothic", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+$font02: 'Radley', serif;
+$font03:'Noto Serif JP',"游明朝体", "Yu Mincho","游明朝", YuMincho,  "HG明朝E","Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+$def_fw:$fw_normal;
+
+$pc_all:1600/100;
+$pc_inner:1200/100;
+$pc_wH:866/100;
+$pc_inwH:625/100;
+$pc_font:16;
+//$pc_mainW:951/100;
+//$pc_sideW:216/100;
+
+$sp_all:767/100;
+$sp_inner:687/100;
+
+$spInW:($sp_inner*100)/$sp_all*1vw;
+
+$sp_inwH:889/100;
+$sp_wH:1297/100;
+$sp_font:28;
+
+$txtlH_pc:24/12;
+$txtlH_sp:52/24;
+$titlH_pc:30/24;
+$titlH_sp:45/36;
+$cont_titlH_pc:50/34;
+$cont_titlH_sp:62/48;
+
+$sp_inner_width:$sp_inner*100/$sp_all*1vw;

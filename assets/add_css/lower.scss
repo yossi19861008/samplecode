@@ -1,0 +1,500 @@
+@charset "UTF-8";
+@import "settings/config-1.4.00";
+@import "settings/valiables";
+
+
+/*画像拡大(下層ページ用)
+--------------------------------------------------------------*/
+.img_ex_wrap {
+  &.lower_img_ex {
+    padding: 0;
+    .service_box {
+      z-index: -1;
+      padding: 0;
+      &:not(:last-of-type){
+        margin-bottom: 0;
+      }
+    }
+    .sec_tit_box02 {
+      color: #fff;
+    }
+    .col_txt_box{
+      color: $color01;
+    }
+  }
+  .service_box{
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    &.active{
+      &::before{
+         @include scale;
+      }
+      .aco_btn{
+        &.open_btn{
+          @include scale($scale_x:0,$scale_y:0);
+        }
+        &.close_btn{
+          @include scale;
+        }
+      }
+    }
+  }
+  .service_img{
+    overflow: hidden;
+    @include position($z:-2);
+    width:100%;
+    height:100%;
+    img{
+      @include animetion($s:15,$anime_name:scaleDown,$easing:ease-in-out,$delay:0,$iteration-count:infinite,$direction:alternate,$fill-mode:forwards);
+      @include object-fit;
+    }
+  }
+@include media-pc{
+  $service_pcW:$pc_all - 1.2;
+  padding: 0 60/$pc_font*1rem 150/$pc_all*1%;
+  &.lower_img_ex {
+    .service_box {
+      margin: 0;
+      min-height: 400/$pc_font*1rem;
+    }
+    .inner {
+      margin-top: -240/$pc_font*1rem;
+    }
+    .sec_tit_box02 {
+      .sec_tit02 {
+        padding-right: 64/$pc_inner*1%;
+        position: relative;
+        &::after {
+          @include pseudo-base($bgcolor:#fff);
+          width: 1/$pc_font*1rem;
+          height: 20/$pc_font*1rem;
+          @include position($pos_t:null,$pos_r:20/$pc_font*1rem,$pos_b:10/$pc_font*1rem,$pos_l:null);
+        }
+      }
+    }
+  }
+  .service_box{
+    padding: 105/$pc_font*1rem 0 86/$pc_font*1rem;
+    min-height: 430/$pc_font*1rem;
+    &:not(:last-of-type){
+      margin-bottom: 60/$pc_font*1rem;
+    }
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+  padding: 0 0 150/$sp_all*1%;
+  width:$sp_inner_width;
+  margin: auto;
+  &.lower_img_ex {
+    width: 100%;
+    .service_box {
+      min-height: 380/$sp_all*1vw;
+      &:not(:last-of-type) {
+        margin: 0;
+      }
+    }
+    .inner {
+      width: 607/$sp_all*1vw;
+      margin: -260/$sp_all*1vw auto 0;
+    }
+    .sec_tit_box02 {
+      text-align: left;
+      .sec_tit02 {
+        font-size: 60/$sp_font*1rem;
+      }
+      .sec_sbtit02 {
+        font-size: 28/$sp_font*1rem;
+        padding-left: 30/$sp_all*1vw;
+        position: relative;
+        @include mg_lh($mt:20/$sp_all*1vw , $lH:28/40);
+        &::after {
+          @include pseudo-base($bgcolor:#fff);
+          width: 2/$sp_all*1vw;
+          height: 26/$sp_all*1vw;
+          @include position-y-center($pos_l:0);
+        }
+      }
+    }
+  }
+  .service_box{
+    padding: 80/$sp_all*1vw 0;
+    &:not(:last-of-type){
+      margin-bottom: 60/$sp_all*1vw;
+    }
+  }
+}/////////END SP////////////////////////////
+}
+
+
+/*青BOX(下層ページ用)
+--------------------------------------------------------------*/
+.col_area_box {
+  .content_txt {
+    text-align: center;
+    color: #fff;
+    background: rgba($c_blue,0.9);
+    .tit_no_box {
+      letter-spacing: 0.025em;
+    }
+    .txt_box {
+      margin: 0 auto;
+      font-weight: $fw_medium;
+      letter-spacing: 0.03em;
+    }
+  }
+  @include media-pc{
+    margin-top: 60/$pc_font*1rem;
+    @include justify-content;
+    .content_txt {
+      padding: 40/$pc_font*1rem 0 50/$pc_font*1rem;
+      .tit {
+        font-size: 20/$pc_font*1rem;
+      }
+      .tit_no {
+        font-size: 46/$pc_font*1rem;
+        padding-bottom: 16/$pc_font*1rem;
+        border-bottom: 1px solid #fff;
+        display: inline-block;
+      }
+      .txt_box {
+        font-size: 20/$pc_font*1rem;
+        margin-top: 20/$pc_font*1rem;
+      }
+    }
+  }/////////END PC////////////////////////////
+  @include media-sp {
+    margin-top: 60/$sp_all*1vw;
+    .content_txt {
+      padding: 30/$sp_all*1vw 0 50/$sp_all*1vw;
+      &:not(:first-child) {
+        margin-top: 60/$sp_all*1vw;
+      }
+      .tit_no_box {
+        @include justify-content(center);
+        @include align-items(baseline);
+        position: relative;
+        padding-bottom: 20/$sp_all*1vw;
+        &::after {
+          @include pseudo-base($bgcolor:#fff);
+          width: 40/$sp_all*1vw;
+          height: 2/$sp_all*1vw;
+          @include position-x-center($pos_b:0);
+        }
+      }
+      .tit {
+        font-size: 26/$sp_font*1rem;
+      }
+      .tit_no {
+        font-size: 50/$sp_font*1rem;
+        margin-left: 20/$sp_all*1vw;
+      }
+      .txt_box {
+        width: 490/$sp_all*1vw;
+        font-size: 36/$sp_font*1rem;
+        margin-top: 30/$sp_all*1vw;
+      }
+    }
+  }/////////END Sp////////////////////////////
+}
+
+
+/*breadcrumbs（パンくずリスト）
+-----------------------------------------------------------------------------*/
+.breadcrumbs {
+  margin-top: 70/$pc_font*1rem;
+  .list_area {
+    text-align: right;
+    li {
+      display: inline-block;
+      list-style-type: none;
+      padding-right: 18/$pc_font*1rem;
+      position: relative;
+      font-size: 13/$pc_font*1rem;
+      color: #fff;
+      letter-spacing: 0.05em;
+      &:not(:last-child) {
+        &::after {
+          @include pseudo-base($content:"／",$color:#fff,$w:5/$pc_font*1rem,$h:100%);
+          @include position-y-center($pos_r:8/$pc_font*1rem);
+        }
+      }
+      a {
+        @include transition;
+        text-decoration: underline;
+        &:hover {
+          color: $color03;
+        }
+      }
+    }
+  }
+}
+
+/*mv_wrap
+--------------------------------------------------------------*/
+.mv_wrap{
+ // height: 100vh;
+@include media-pc{
+   height: 530/$pc_font*1rem;
+  + *{
+    padding-top: 120/$pc_font*1rem;
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+height: 530/$sp_all*1vw;
+  //margin-bottom: 70/$sp_all*1vw;
+  + *{
+    padding-top: 70/$sp_all*1vw;
+  }
+}/////////END SP////////////////////////////
+}
+
+/*.under_mv（下層ページMV）
+--------------------------------------------------------------*/
+.under_mv{
+  position: relative;
+  .inner{
+    @include position-x-center($z:1);
+    margin: 0 auto;
+  }
+  .mv_txt_area{
+    text-align: right;
+    color: #fff;
+    margin: auto;
+    .mv_tit {
+      letter-spacing: 0.025em;
+    }
+    .mv_txt {
+      letter-spacing: 0.1em;
+      font-weight: $fw_medium;
+      position: relative;
+      &::after {
+        @include pseudo-base($bgcolor:#fff);
+        @include position-y-center($pos_r:0);
+      }
+    }
+  }
+  .mv_img{
+    display: block;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    img{
+      @include animetion($s:15,$anime_name:scaleDown,$easing:ease-in-out,$delay:0,$iteration-count:infinite,$direction:alternate,$fill-mode:forwards);
+      @include object-fit;
+    }
+  }
+@include media-pc{
+  height: 530/$pc_font*1rem;
+  //margin-bottom: 120/$pc_font*1rem;
+  .inner{
+    max-width: 1300px;
+    top: 50/$pc_font*1rem;
+  }
+  .mv_logo{
+    width:138/13*1%;
+  }
+  .mv_txt_area{
+    margin-top: 30/$pc_font*1rem;
+    .mv_tit {
+      font-size: 75/$pc_font*1rem;
+      letter-spacing: 0.025em;
+    }
+    .mv_txt {
+      @include mg_lh($mt:16/$pc_font*1rem , $lH:45/26);
+      font-size: 26/$pc_font*1rem;
+      letter-spacing: 0.1em;
+      padding-right: 44/$pc_font*1rem;
+      &::after {
+        width: 30/$pc_font*1rem;
+        height: 3/$pc_font*1rem;
+      }
+    }
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+  height: 530/$sp_all*1vw;
+  //margin-bottom: 70/$sp_all*1vw;
+  .inner{
+    width: 678/$sp_all*1vw;
+    top: 40/$sp_all*1vw;
+  }
+  .mv_logo{
+    width:138/$sp_all*1vw;
+  }
+  .mv_txt_area{
+    margin-top: 104/$sp_all*1vw;
+    .mv_tit {
+      font-size: 62/$sp_font*1rem;
+    }
+    .mv_txt {
+      @include mg_lh($mt:34/$sp_all*1vw , $lH:28/49);
+      font-size: 28/$sp_font*1rem;
+      padding-right: 50/$sp_all*1vw;
+      &::after {
+        width: 30/$sp_all*1vw;
+        height: 4/$sp_all*1vw;
+      }
+    }
+  }
+}/////////END SP////////////////////////////
+}
+
+
+/*.sec_tit_box02（下層セクションタイトル）
+--------------------------------------------------------------*/
+.sec_tit_box02 {
+  text-align: center;
+  color: #333333;
+  .sec_tit02 {
+    letter-spacing: 0.025em;
+  }
+  .sec_sbtit02 {
+    letter-spacing: 0.05em;
+    font-weight: $fw_medium;
+    color: #333333;
+    position: relative;
+    &::after {
+      @include pseudo-base($bgcolor:$color01);
+      @include position-x-center($pos_b:0);
+    }
+    &.no_line {
+      padding: 0;
+      color: #fff;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  @include media-pc{
+    .sec_tit02 {
+      font-size: 52/$pc_font*1rem;
+    }
+    .sec_sbtit02 {
+      font-size: 20/$pc_font*1rem;
+      @include mg_lh($mt:20/$pc_font*1rem , $lH:40/20);
+      padding-bottom: 20/$pc_font*1rem;
+      &::after {
+        width: 60/$pc_font*1rem;
+        height: 1/$pc_font*1rem;
+      }
+    }
+  }/////////END PC////////////////////////////
+  @include media-sp {
+    .sec_tit02 {
+      font-size: 60/$sp_font*1rem;
+    }
+    .sec_sbtit02 {
+      font-size: 28/$sp_font*1rem;
+      @include mg_lh($mt:30/$sp_all*1vw , $lH:28/40);
+      padding-bottom: 30/$sp_all*1vw;
+      &::after {
+        width: 60/$sp_all*1vw;
+        height: 2/$sp_all*1vw;
+      }
+    }
+  }/////////END SP////////////////////////////
+}
+
+
+/*.two_col_box（2カラム）
+--------------------------------------------------------------*/
+.two_col_box {
+  @include media-pc{
+    .left_box {
+      width: 50%;
+    }
+    .right_box {
+      width: 50%;
+    }
+  }
+}
+
+
+/*common_txt_area（GSCプライド）
+--------------------------------------------------------------*/
+.common_txt_area {
+  .tit_box {
+    font-weight: $fw_medium;
+    letter-spacing: 0.05em;
+    .sb_tit {
+      color: #969696;
+    }
+    .tit {
+      color: $c_blue;
+      font-weight: $fw_medium;
+    }
+  }
+  .txt {
+    letter-spacing: 0.05em;
+    color: #333;
+  }
+@include media-pc{
+  .tit_box {
+    .sb_tit {
+      font-size: 20/$pc_font*1rem;
+    }
+    .tit {
+      font-size: 28/$pc_font*1rem;
+      @include mg_lh($mt:30/$pc_font*1rem , $lH:48/28);
+    }
+  }
+  .txt {
+    font-size: 17/$pc_font*1rem;
+    @include mg_lh($mt:50/$pc_font*1rem , $lH:36/17);
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+  .tit_box {
+    .sb_tit {
+      font-size: 30/$sp_font*1rem;
+    }
+    .tit {
+      font-size: 36/$sp_font*1rem;
+      @include mg_lh($mt:40/$sp_all*1vw , $lH:58/36);
+    }
+  }
+  .txt {
+    font-size: 28/$sp_font*1rem;
+    @include mg_lh($mt:40/$sp_all*1vw , $lH:47/28);
+  }
+}/////////END SP////////////////////////////
+}
+
+
+/*contact
+--------------------------------------------------------------*/
+#contact {
+@include media-pc{
+  margin-top: 120/$pc_font*1rem;
+}/////////END PC////////////////////////////
+@include media-sp {
+  margin-top: 120/$sp_all*1vw;
+}/////////END SP////////////////////////////
+}
+
+
+
+@keyframes scaleDown {
+  0% {
+    @include scale(1.15, 1.15);
+  }
+  100% {
+    @include scale
+      }
+}
+
+
+
+
+@keyframes btnAnime01 {
+  0% {
+     @include scale;
+  }
+  50% {
+    @include scale($scale_x:0,$scale_y:0);
+  }
+  100% {
+    @include scale;
+  }
+}

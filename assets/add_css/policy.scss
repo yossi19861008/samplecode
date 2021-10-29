@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import "settings/config-1.6.01";
+@import "settings/valiables";
+
+/*policy
+-----------------------------------------------------------------------------*/
+#policy{
+  .intro_txt{
+   @include fontSet($ls:0.05em);
+  }
+  .policy_list{
+    counter-reset: policyNo;
+  }
+  .list_tit{
+    counter-increment: policyNo;
+    @include flex_box(nowrap);
+    @include align-items;
+    span{
+      @include fontSet($ls:0.05em,$fw:500,$lh:1.3);
+      order:1;
+    }
+    &::before{
+      @include pseudo-square($h:1px,$bgcolor:$color02);
+    }
+    &::after{
+       content: "0"counter(policyNo);
+      @include fontSet($ls:0.025em,$ff:$font02,$lh:1.3);
+      color:$color02;
+    }
+  }
+  .list_cont{
+    >*{
+       @include fontSet($ls:0.05em);
+    }
+    li{
+      @include text-indent;
+    }
+    .indl{
+      border-top: 1px solid #e6e6e6;
+      >*{
+        @include fontSet($ls:0.05em);
+      }
+      dt{
+        color:$color02;
+      }
+      dd{
+        border-bottom: 1px solid #e6e6e6;
+      }
+    }
+  }
+@include media-pc{
+  .policy_wrap{
+    width:1000/$pc_inner*1%;
+    margin: auto;
+  }
+  .intro_txt{
+   @include fontSet($fs:17/$pc_font*1rem,$lh:36/17,$mb:120/$pc_font*1rem);
+  }
+  .list_tit{
+    margin-bottom: 50/$pc_font*1rem;
+    span{
+      @include fontSet($fs:24/$pc_font*1rem);
+    }
+    &::before{
+      width:20/$pc_font*1rem;
+    }
+    &::after{
+      @include fontSet($fs:36/$pc_font*1rem);
+      margin-right: 28/$pc_font*1rem;
+      margin-left: 12/$pc_font*1rem;
+    }
+  }
+  .list_cont{
+    &:not(:last-child){
+      margin-bottom: 90/$pc_font*1rem;
+    }
+    >*{
+       @include fontSet($fs:17/$pc_font*1rem,$lh:36/17,$mb:40/$pc_font*1rem,$lastMb0:true);
+    }
+    .indl{
+      padding-top: 30/$pc_font*1rem;
+      @include flex_box;
+      >*{
+        @include fontSet($fs:16/$pc_font*1rem);
+        &:not(:last-of-type){
+          margin-bottom: 30/$pc_font*1rem;
+        }
+      }
+      dt{
+        width:300/$pc_font*1rem;
+        padding: 0 65/$pc_font*1rem 30/$pc_font*1rem 30/$pc_font*1rem;
+        border-bottom: 1px solid #e6e6e6;
+        line-height: (28/16);
+      }
+      dd{
+        width:calc(100% - #{300/$pc_font*1rem});
+        padding: 0 30/$pc_font*1rem 30/$pc_font*1rem 0;
+      }
+    }
+  }
+}/////////END PC////////////////////////////
+@include media-sp {
+  .policy_wrap{
+    width:$spInW;
+    margin: auto;
+  }
+  .intro_txt{
+   @include fontSet($fs:28/$sp_font*1rem,$lh:47.6/28,$mb:120/$sp_all*1vw);
+  }
+  .policy_list{
+    width:607/$sp_all*1vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .list_tit{
+    margin-bottom: 50/$sp_all*1vw;
+    span{
+      @include fontSet($fs:30/$sp_font*1rem);
+    }
+    &::before{
+      width:24/$sp_all*1vw;
+    }
+    &::after{
+      @include fontSet($fs:46/$sp_font*1rem);
+      margin-right: 32/$sp_all*1vw;
+      margin-left: 20/$sp_all*1vw;
+    }
+  }
+  .list_cont{
+    &:not(:last-child){
+      margin-bottom: 100/$sp_all*1vw;
+    }
+    >*{
+       @include fontSet($fs:24/$sp_font*1rem,$lh:43.2/24,$mb:40/$sp_all*1vw,$lastMb0:true);
+    }
+    .indl{
+      padding-top: 40/$sp_all*1vw;
+      >*{
+        //@include fontSet($fs:16/$sp_font*1rem);
+//        &:not(:last-child){
+//          margin-bottom: 40/$sp_all*1vw;
+//        }
+      }
+      dt{
+        @include fontSet($fs:28/$sp_font*1rem);
+        margin-bottom: 30/$sp_all*1vw;
+       // padding: 0 65/$sp_all*1vw 30/$sp_all*1vw 30/$sp_all*1vw;
+        //line-height: (28/16);
+      }
+      dd{
+        @include fontSet($fs:24/$sp_font*1rem);
+        line-height: (43.2/24);
+        padding-bottom: 40/$sp_all*1vw;
+        &:not(:last-child){
+           margin-bottom: 40/$sp_all*1vw;
+        }
+      }
+    }
+    .note{
+      @include text-indent(3);
+    }
+    .contact_info{
+      li{
+        @include text-indent(4.25);
+      }
+    }
+  }
+}/////////END SP////////////////////////////
+}
