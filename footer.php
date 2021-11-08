@@ -20,7 +20,7 @@ global $incPart;
         <p class="f_logo"><img src="<?php logoUrl(); ?>" alt="<?php bloginfo('bloginfo');?>"></p>
         <p class="logo_txt"><img src="<?php echo get_template_directory_uri(); ?>/assets/add_img/site_tit.svg" alt="大津市企業局出資会社・大阪ガス機器取扱店 （株）大津ガスサービスセンター"></p>
       </div>
-      <nav class="fnav">
+      <nav class="fav">
        <ul class="flex_box fnav_list">
         <?php 
         $incPart = 'footer';
